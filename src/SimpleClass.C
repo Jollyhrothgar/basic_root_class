@@ -2,16 +2,10 @@
 
 SimpleClass::SimpleClass()
 {
-	std::cout << "Hello" << std::endl;
+	std::cout << "SimpleClass instantiated at" << this << std::endl;
 }
 
 SimpleClass::~SimpleClass()
 {
 
-}
-
-int SimpleClass::SetSecret(int thevalue)
-{
-	a_secret_variable = thevalue;
-	return a_secret_variable;
 }

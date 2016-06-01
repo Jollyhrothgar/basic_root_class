@@ -3,7 +3,7 @@ AUTOMAKE_OPTIONS = foreign
 # these are flags sent to the C++ compiler
 # -Wall : I don't know what this does
 # -Werror: this will treat undefined and unused variables as errors
-AM_CXXFLAGS = -Wall -Werror
+AM_CXXFLAGS = -Wall -Werror -std=c++0x
 
 # This flag will build 'testexternals.C' as a test for the build environment
 BUILT_SOURCES = \
@@ -12,7 +12,6 @@ BUILT_SOURCES = \
 # This is where we set the directories where we put our neccessary header files
 AM_CPPFLAGS = \
   -I$(includedir) \
-  -I$(OFFLINE_MAIN)/include \
   -I$(ROOTSYS)/include
 
 lib_LTLIBRARIES = \
@@ -32,6 +31,7 @@ AM_LDFLAGS = \
 # These sources are compiled into the final library
 libSimpleClass_la_SOURCES = \
   SimpleClass.C \
+  SimpleFunction.C \
   DictOutput.cxx
 
 noinst_PROGRAMS = \
@@ -48,7 +48,10 @@ testexternals.C:
 	echo "}" >> $@
 
 # This is where the dictionary file is generated
-DictOutput.cxx: SimpleClass.h SimpleClassLinkDef.h
+DictOutput.cxx: \
+	SimpleClass.h \
+	SimpleFunction.h \
+	SimpleClassLinkDef.h
 	rootcint -f $@ -c $(DEFAULT_INCLUDES) $(AM_CPPFLAGS) $^
 
 clean-local:

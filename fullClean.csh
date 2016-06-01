@@ -19,3 +19,4 @@ rm -rfv src/configure
 rm -rfv src/ltmain.sh
 rm -rfv src/Makefile.in
 rm -vf lib/*
+rm -vf $MYINSTALL/lib/libSimpleClass*
