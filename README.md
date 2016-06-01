@@ -2,6 +2,8 @@
 This module is designed to show you how to write your own class, compile it to your own
 library, and load and run that library in root with a macro.
 
+This tutorial works with ROOT version 5.34. It probably doesn't work with ROOT 6.0.
+
 # Standard Warning
 This tutorial was written by Mike Beaumier. I am a graduate student at UCR,
 and am not a programmer by training. These tutorials may not represent the
