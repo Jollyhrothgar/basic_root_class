@@ -4,16 +4,6 @@ library, and load and run that library in root with a macro.
 
 This tutorial works with ROOT version 5.34. It probably doesn't work with ROOT 6.0.
 
-# Standard Warning
-This tutorial was written by Mike Beaumier. I am a graduate student at UCR,
-and am not a programmer by training. These tutorials may not represent the
-best programming style, or standard coding conventions - though I am in a
-continual process of self-teaching programming, coding conventions, and trying
-to become a better programmer.
-
-These tools may make your life easier or harder, but I hope they answer your
-questions.
-
 # Summary:
 You may build your code from any directory, but my convention is to have a
 dedicated build directory. Some people like to have a centralized location
